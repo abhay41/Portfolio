@@ -99,13 +99,6 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
           >
-            <Button variant="hero" size="xl" className="group" asChild>
-              <a href="/Resume_Abhay.pdf" target="_blank" rel="noopener noreferrer">
-                <Download className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                View Resume
-              </a>
-            </Button>
-            
             <Button variant="glass" size="xl" className="group" asChild>
               <a 
                 href="https://github.com/abhay41"
