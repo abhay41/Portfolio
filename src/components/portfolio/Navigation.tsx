@@ -77,10 +77,11 @@ const Navigation = () => {
   const toggleTheme = () => {
     const currentIndex = themes.findIndex(theme => theme.value === currentTheme);
     const nextIndex = (currentIndex + 1) % themes.length;
-    setCurrentTheme(themes[nextIndex].value);
+    const nextTheme = themes[nextIndex].value;
+    setCurrentTheme(nextTheme);
     
-    // Apply theme to document
-    document.documentElement.setAttribute("data-theme", themes[nextIndex].value);
+    // Apply theme to document root
+    document.documentElement.className = nextTheme === 'default' ? '' : nextTheme;
   };
 
   return (
