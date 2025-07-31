@@ -28,8 +28,8 @@ const contactInfo = {
   email: "abhay.thakur@example.com",
   phone: "+91 98765 43210",
   location: "Bangalore, Karnataka, India",
-  linkedin: "https://linkedin.com/in/abhaythakur",
-  github: "https://github.com/abhaythakur",
+  linkedin: "https://www.linkedin.com/in/abhay-thakur-614b1a2b4/",
+  github: "https://github.com/abhay41",
   twitter: "https://twitter.com/abhaythakur",
   calendly: "https://calendly.com/abhaythakur" // Optional: for meeting scheduling
 };

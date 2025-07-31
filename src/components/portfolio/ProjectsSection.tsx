@@ -23,7 +23,7 @@ const projects = [
     technologies: ["React", "Node.js", "Python", "TensorFlow", "MongoDB", "WebSocket"],
     category: "AI/ML",
     demoLink: "https://demo-taskmanager.vercel.app",
-    githubLink: "https://github.com/abhaythakur/ai-task-manager",
+    githubLink: "https://github.com/abhay41/ai-task-manager",
     featured: true,
     status: "Completed",
     year: "2024",
@@ -38,7 +38,7 @@ const projects = [
     technologies: ["React", "Node.js", "Docker", "Kubernetes", "PostgreSQL", "Redis"],
     category: "Web Development",
     demoLink: "https://ecommerce-demo.netlify.app",
-    githubLink: "https://github.com/abhaythakur/ecommerce-microservices",
+    githubLink: "https://github.com/abhay41/ecommerce-microservices",
     featured: true,
     status: "In Progress",
     year: "2024",
@@ -53,7 +53,7 @@ const projects = [
     technologies: ["Solidity", "Web3.js", "React", "Ethereum", "IPFS", "MetaMask"],
     category: "Blockchain",
     demoLink: "https://blockchain-voting.herokuapp.com",
-    githubLink: "https://github.com/abhaythakur/blockchain-voting",
+    githubLink: "https://github.com/abhay41/blockchain-voting",
     featured: false,
     status: "Completed",
     year: "2023",
@@ -68,7 +68,7 @@ const projects = [
     technologies: ["React", "Socket.io", "Node.js", "WebRTC", "MongoDB", "JWT"],
     category: "Web Development",
     demoLink: "https://realtime-chat-app.vercel.app",
-    githubLink: "https://github.com/abhaythakur/realtime-chat",
+    githubLink: "https://github.com/abhay41/realtime-chat",
     featured: false,
     status: "Completed",
     year: "2024",
@@ -83,7 +83,7 @@ const projects = [
     technologies: ["Arduino", "Python", "Flask", "React", "SQLite", "Chart.js"],
     category: "IoT",
     demoLink: "https://weather-monitor.netlify.app",
-    githubLink: "https://github.com/abhaythakur/iot-weather-monitor",
+    githubLink: "https://github.com/abhay41/iot-weather-monitor",
     featured: false,
     status: "Completed",
     year: "2023",
@@ -98,7 +98,7 @@ const projects = [
     technologies: ["React Native", "Firebase", "TensorFlow Lite", "Redux", "Expo"],
     category: "Mobile Development",
     demoLink: "https://fitness-tracker-demo.expo.dev",
-    githubLink: "https://github.com/abhaythakur/fitness-tracker",
+    githubLink: "https://github.com/abhay41/fitness-tracker",
     featured: false,
     status: "In Progress",
     year: "2024",
@@ -305,7 +305,7 @@ const ProjectsSection = () => {
               </p>
               <Button variant="gradient" size="lg" asChild>
                 <a 
-                  href="https://github.com/abhaythakur"
+                  href="https://github.com/abhay41"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"

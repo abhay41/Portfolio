@@ -47,7 +47,7 @@ const GitHubProfile = () => {
   const [selectedLanguage, setSelectedLanguage] = useState<string>("All");
 
   // CONFIGURATION: Update this GitHub username
-  const GITHUB_USERNAME = "abhaythakur";
+  const GITHUB_USERNAME = "abhay41";
 
   useEffect(() => {
     const fetchGitHubData = async () => {

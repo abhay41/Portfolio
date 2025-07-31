@@ -104,17 +104,34 @@ const HeroSection = () => {
               View & Download Resume
             </Button>
             
-            <Button variant="glass" size="xl" className="group">
-              <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              GitHub Profile
+            <Button variant="glass" size="xl" className="group" asChild>
+              <a 
+                href="https://github.com/abhay41"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                GitHub Profile
+              </a>
             </Button>
             
-            <Button variant="glass" size="xl" className="group">
-              <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              LinkedIn
+            <Button variant="glass" size="xl" className="group" asChild>
+              <a 
+                href="https://www.linkedin.com/in/abhay-thakur-614b1a2b4/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                LinkedIn
+              </a>
             </Button>
             
-            <Button variant="glass" size="xl" className="group">
+            <Button 
+              variant="glass" 
+              size="xl" 
+              className="group"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Contact Me
             </Button>
