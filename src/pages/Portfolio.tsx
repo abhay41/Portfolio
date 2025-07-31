@@ -93,9 +93,6 @@ const Portfolio = () => {
               <p className="text-sm text-muted-foreground">
                 © 2024 Abhay Thakur. All rights reserved.
               </p>
-              <p className="text-xs text-muted-foreground mt-1">
-                Built with React, TypeScript, and Tailwind CSS
-              </p>
             </div>
             
             <div className="text-center md:text-right">

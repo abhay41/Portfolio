@@ -166,6 +166,20 @@ const ProjectsSection = () => {
                       ))}
                     </div>
                   </div>
+
+                  {/* Source Code Button */}
+                  <div className="mt-4">
+                    <Button variant="outline" size="sm" className="group" asChild>
+                      <a 
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
+                        Source Code
+                      </a>
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
