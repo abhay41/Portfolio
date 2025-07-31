@@ -220,19 +220,6 @@ const ContactSection = () => {
                     </a>
                   </Button>
 
-                  {contactInfo.calendly && (
-                    <Button variant="gradient" size="sm" asChild className="justify-start">
-                      <a 
-                        href={contactInfo.calendly}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-3"
-                      >
-                        <Calendar className="w-4 h-4" />
-                        Schedule a Meeting
-                      </a>
-                    </Button>
-                  )}
                 </div>
               </CardContent>
             </Card>
@@ -305,43 +292,19 @@ const ContactSection = () => {
                         />
                       </div>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <FormField
-                          control={form.control}
-                          name="subject"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Subject</FormLabel>
-                              <FormControl>
-                                <Input placeholder="What's this about?" {...field} />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-
-                        <FormField
-                          control={form.control}
-                          name="projectType"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Project Type (Optional)</FormLabel>
-                              <FormControl>
-                                <select 
-                                  {...field} 
-                                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                                >
-                                  <option value="">Select project type</option>
-                                  {projectTypes.map((type) => (
-                                    <option key={type} value={type}>{type}</option>
-                                  ))}
-                                </select>
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                      </div>
+                      <FormField
+                        control={form.control}
+                        name="subject"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Subject</FormLabel>
+                            <FormControl>
+                              <Input placeholder="What's this about?" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
 
                       <FormField
                         control={form.control}

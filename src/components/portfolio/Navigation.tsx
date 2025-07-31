@@ -31,8 +31,6 @@ const navItems = [
 const themes = [
   { name: "Default", value: "default" },
   { name: "Ocean", value: "ocean" },
-  { name: "Sunset", value: "sunset" },
-  { name: "Forest", value: "forest" },
 ];
 
 const Navigation = () => {
@@ -152,9 +150,11 @@ const Navigation = () => {
               </Button>
 
               {/* Resume Download */}
-              <Button variant="gradient" size="sm" className="hidden sm:flex">
-                <Download className="w-4 h-4 mr-2" />
-                Resume
+              <Button variant="gradient" size="sm" className="hidden sm:flex" asChild>
+                <a href="/Resume_Abhay.pdf" target="_blank" rel="noopener noreferrer">
+                  <Download className="w-4 h-4 mr-2" />
+                  View Resume
+                </a>
               </Button>
 
               {/* Mobile Menu Toggle */}
@@ -210,9 +210,11 @@ const Navigation = () => {
                 Change Theme ({themes.find(t => t.value === currentTheme)?.name})
               </Button>
               
-              <Button variant="gradient" size="sm" className="w-full justify-start">
-                <Download className="w-4 h-4 mr-3" />
-                Download Resume
+              <Button variant="gradient" size="sm" className="w-full justify-start" asChild>
+                <a href="/Resume_Abhay.pdf" target="_blank" rel="noopener noreferrer">
+                  <Download className="w-4 h-4 mr-3" />
+                  View Resume
+                </a>
               </Button>
             </div>
           </div>

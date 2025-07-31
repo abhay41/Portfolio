@@ -107,17 +107,7 @@ const projects = [
   }
 ];
 
-const categories = ["All", "Web Development", "AI/ML", "Mobile Development", "Blockchain", "IoT"];
-
 const ProjectsSection = () => {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [showFeaturedOnly, setShowFeaturedOnly] = useState(false);
-
-  const filteredProjects = projects.filter(project => {
-    const categoryMatch = selectedCategory === "All" || project.category === selectedCategory;
-    const featuredMatch = !showFeaturedOnly || project.featured;
-    return categoryMatch && featuredMatch;
-  });
 
   return (
     <section id="projects" className="py-20 bg-muted/30">
@@ -137,42 +127,10 @@ const ProjectsSection = () => {
           </p>
         </motion.div>
 
-        {/* Filters */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
-        >
-          <div className="flex flex-wrap gap-2 justify-center">
-            {categories.map((category) => (
-              <Button
-                key={category}
-                variant={selectedCategory === category ? "default" : "outline"}
-                size="sm"
-                onClick={() => setSelectedCategory(category)}
-                className="transition-all duration-200"
-              >
-                {category}
-              </Button>
-            ))}
-          </div>
-          
-          <Button
-            variant={showFeaturedOnly ? "default" : "outline"}
-            size="sm"
-            onClick={() => setShowFeaturedOnly(!showFeaturedOnly)}
-            className="flex items-center gap-2"
-          >
-            <Star className="w-4 h-4" />
-            Featured Only
-          </Button>
-        </motion.div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {filteredProjects.map((project, index) => (
+          {projects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 30 }}
@@ -182,35 +140,14 @@ const ProjectsSection = () => {
             >
               <Card className={`glass-card glow-on-hover h-full ${project.featured ? 'ring-2 ring-primary/20' : ''}`}>
                 <CardHeader>
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
-                        <CardTitle className="text-xl">{project.title}</CardTitle>
-                        {project.featured && (
-                          <Badge variant="default" className="text-xs">
-                            <Star className="w-3 h-3 mr-1" />
-                            Featured
-                          </Badge>
-                        )}
-                      </div>
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
-                        <div className="flex items-center gap-1">
-                          <Calendar className="w-4 h-4" />
-                          {project.year}
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Users className="w-4 h-4" />
-                          {project.teamSize}
-                        </div>
-                        <Badge 
-                          variant={project.status === "Completed" ? "default" : "secondary"}
-                          className="text-xs"
-                        >
-                          {project.status}
-                        </Badge>
-                      </div>
-                    </div>
+                  <div className="aspect-video bg-muted rounded-lg mb-4 overflow-hidden">
+                    <img 
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
+                  <CardTitle className="text-xl">{project.title}</CardTitle>
                 </CardHeader>
                 
                 <CardContent className="pt-0">
@@ -218,20 +155,8 @@ const ProjectsSection = () => {
                     {project.description}
                   </p>
 
-                  {/* Key Highlights */}
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold mb-2">Key Highlights:</h4>
-                    <div className="flex flex-wrap gap-1">
-                      {project.highlights.map((highlight) => (
-                        <Badge key={highlight} variant="outline" className="text-xs">
-                          {highlight}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-
                   {/* Technologies */}
-                  <div className="mb-6">
+                  <div className="mb-4">
                     <h4 className="text-sm font-semibold mb-2">Technologies Used:</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech) => (
@@ -241,82 +166,12 @@ const ProjectsSection = () => {
                       ))}
                     </div>
                   </div>
-
-                  {/* Action Buttons */}
-                  <div className="flex gap-3">
-                    <Button variant="default" size="sm" asChild className="flex-1">
-                      <a 
-                        href={project.demoLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2"
-                      >
-                        <Play className="w-4 h-4" />
-                        Live Demo
-                      </a>
-                    </Button>
-                    
-                    <Button variant="outline" size="sm" asChild className="flex-1">
-                      <a 
-                        href={project.githubLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2"
-                      >
-                        <Github className="w-4 h-4" />
-                        Source Code
-                      </a>
-                    </Button>
-                  </div>
                 </CardContent>
               </Card>
             </motion.div>
           ))}
         </div>
 
-        {/* No Projects Message */}
-        {filteredProjects.length === 0 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-center py-12"
-          >
-            <Filter className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-            <h3 className="text-xl font-semibold mb-2">No projects found</h3>
-            <p className="text-muted-foreground">
-              Try adjusting your filters to see more projects.
-            </p>
-          </motion.div>
-        )}
-
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <Card className="glass-card glow-primary">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4">Want to see more?</h3>
-              <p className="text-muted-foreground mb-6">
-                Check out my GitHub profile for a complete list of projects and contributions
-              </p>
-              <Button variant="gradient" size="lg" asChild>
-                <a 
-                  href="https://github.com/abhay41"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  <Github className="w-5 h-5" />
-                  View All Projects on GitHub
-                </a>
-              </Button>
-            </CardContent>
-          </Card>
-        </motion.div>
       </div>
     </section>
   );

@@ -52,19 +52,14 @@ const aboutData = {
 
   achievements: [
     {
-      icon: Trophy,
-      title: "Hackathon Winner",
-      description: "First place in Regional Tech Hackathon 2024"
-    },
-    {
       icon: BookOpen,
       title: "Research Paper",
       description: "Published research on AI applications in healthcare"
     },
     {
-      icon: Rocket,
-      title: "Startup Experience",
-      description: "Co-founded and led technical development at tech startup"
+      icon: Trophy,
+      title: "Scholarship",
+      description: "Received Merit-based Academic Scholarship 2023–24"
     }
   ],
 
@@ -216,7 +211,7 @@ const AboutSection = () => {
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-center mb-8">Recent Achievements</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {aboutData.achievements.map((achievement, index) => (
               <motion.div
                 key={achievement.title}

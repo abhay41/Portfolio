@@ -106,45 +106,6 @@ All colors MUST be HSL.
     --muted-foreground: 215 20% 65%;
   }
 
-  /* Sunset Theme */
-  .sunset {
-    --background: 20 100% 8%;
-    --foreground: 60 9.1% 97.8%;
-    --card: 20 100% 10%;
-    --card-foreground: 60 9.1% 97.8%;
-    --primary: 24 100% 50%;
-    --primary-foreground: 20 100% 8%;
-    --primary-glow: 24 100% 60%;
-    --secondary: 345 83% 47%;
-    --secondary-foreground: 20 100% 8%;
-    --secondary-glow: 345 83% 60%;
-    --accent: 60 100% 50%;
-    --accent-foreground: 20 100% 8%;
-    --border: 24 50% 15%;
-    --input: 24 50% 15%;
-    --muted: 20 30% 15%;
-    --muted-foreground: 25 20% 65%;
-  }
-
-  /* Forest Theme */
-  .forest {
-    --background: 120 100% 4%;
-    --foreground: 60 9.1% 97.8%;
-    --card: 120 100% 6%;
-    --card-foreground: 60 9.1% 97.8%;
-    --primary: 120 60% 40%;
-    --primary-foreground: 120 100% 4%;
-    --primary-glow: 120 60% 50%;
-    --secondary: 160 40% 30%;
-    --secondary-foreground: 120 100% 4%;
-    --secondary-glow: 160 40% 40%;
-    --accent: 80 100% 50%;
-    --accent-foreground: 120 100% 4%;
-    --border: 120 30% 12%;
-    --input: 120 30% 12%;
-    --muted: 140 20% 15%;
-    --muted-foreground: 125 15% 65%;
-  }
 }
 
 @layer base {
