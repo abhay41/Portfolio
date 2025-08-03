@@ -51,7 +51,7 @@ const aboutData = {
     {
       icon: BookOpen,
       title: "Research Paper",
-      description: "Published a paper titled *“Implementation and Performance Analysis of K-NN Algorithm for Classification”*, highlighting its real-world performance."
+      description: "Published a paper titled “Implementation and Performance Analysis of K-NN Algorithm for Classification”, highlighting its real-world performance."
     },
     {
       icon: Trophy,
