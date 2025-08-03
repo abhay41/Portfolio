@@ -3,35 +3,46 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import emailjs from "emailjs-com";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage
+} from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Linkedin, 
-  Github, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Github,
   Twitter,
   Send,
   CheckCircle,
   MessageCircle,
-  Clock,
-  Calendar
+  Clock
 } from "lucide-react";
 
 // CONFIGURATION: Update these contact details
 const contactInfo = {
-  email: "abhay.thakur@example.com",
-  phone: "+91 98765 43210",
-  location: "Bangalore, Karnataka, India",
+  email: "tabhay6408@gmail.com",
+  phone: "+91 88091 39192",
+  location: "Bhubaneswar, Odisha, India",
   linkedin: "https://www.linkedin.com/in/abhay-thakur-614b1a2b4/",
   github: "https://github.com/abhay41",
-  twitter: "https://twitter.com/abhaythakur",
-  calendly: "https://calendly.com/abhaythakur" // Optional: for meeting scheduling
+  twitter: "https://x.com/abhay_thakur41"
 };
 
 const contactSchema = z.object({
@@ -39,21 +50,10 @@ const contactSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
   subject: z.string().min(5, "Subject must be at least 5 characters"),
   message: z.string().min(10, "Message must be at least 10 characters"),
-  projectType: z.string().optional(),
+  projectType: z.string().optional()
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
-
-const projectTypes = [
-  "Web Development",
-  "Mobile App Development",
-  "AI/ML Project",
-  "Blockchain Development",
-  "IoT Project",
-  "Consultation",
-  "Collaboration",
-  "Other"
-];
 
 const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -67,31 +67,38 @@ const ContactSection = () => {
       email: "",
       subject: "",
       message: "",
-      projectType: "",
-    },
+      projectType: ""
+    }
   });
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
-    
     try {
-      // Simulate form submission - replace with actual API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      console.log("Form submitted:", data);
-      
+      await emailjs.send(
+        "service_fmkc0yq",
+        "template_bx7i9bk",
+        {
+          from_name: data.name,
+          to_name: "Abhay",
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+        },
+        "Zo7CSruK0Ck7rMhwK"
+      );
+
       setIsSubmitted(true);
       form.reset();
-      
+
       toast({
         title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you within 24 hours.",
+        description: "Thank you for reaching out. I'll get back to you within 24 hours."
       });
     } catch (error) {
       toast({
         title: "Error sending message",
         description: "Please try again or contact me directly via email.",
-        variant: "destructive",
+        variant: "destructive"
       });
     } finally {
       setIsSubmitting(false);
@@ -137,10 +144,7 @@ const ContactSection = () => {
                   <Mail className="w-5 h-5 text-primary" />
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <a 
-                      href={`mailto:${contactInfo.email}`}
-                      className="font-medium hover:text-primary transition-colors"
-                    >
+                    <a href={`mailto:${contactInfo.email}`} className="font-medium hover:text-primary transition-colors">
                       {contactInfo.email}
                     </a>
                   </div>
@@ -150,10 +154,7 @@ const ContactSection = () => {
                   <Phone className="w-5 h-5 text-primary" />
                   <div>
                     <p className="text-sm text-muted-foreground">Phone</p>
-                    <a 
-                      href={`tel:${contactInfo.phone}`}
-                      className="font-medium hover:text-primary transition-colors"
-                    >
+                    <a href={`tel:${contactInfo.phone}`} className="font-medium hover:text-primary transition-colors">
                       {contactInfo.phone}
                     </a>
                   </div>
@@ -185,41 +186,25 @@ const ContactSection = () => {
               <CardContent>
                 <div className="flex flex-col gap-3">
                   <Button variant="outline" size="sm" asChild className="justify-start">
-                    <a 
-                      href={contactInfo.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3"
-                    >
+                    <a href={contactInfo.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
                       <Linkedin className="w-4 h-4" />
                       LinkedIn Profile
                     </a>
                   </Button>
-                  
+
                   <Button variant="outline" size="sm" asChild className="justify-start">
-                    <a 
-                      href={contactInfo.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3"
-                    >
+                    <a href={contactInfo.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
                       <Github className="w-4 h-4" />
                       GitHub Profile
                     </a>
                   </Button>
-                  
+
                   <Button variant="outline" size="sm" asChild className="justify-start">
-                    <a 
-                      href={contactInfo.twitter}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3"
-                    >
+                    <a href={contactInfo.twitter} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
                       <Twitter className="w-4 h-4" />
                       Twitter/X Profile
                     </a>
                   </Button>
-
                 </div>
               </CardContent>
             </Card>
@@ -242,22 +227,11 @@ const ContactSection = () => {
               </CardHeader>
               <CardContent>
                 {isSubmitted ? (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="text-center py-12"
-                  >
+                  <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="text-center py-12">
                     <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
                     <h3 className="text-2xl font-bold mb-2 text-green-500">Message Sent!</h3>
-                    <p className="text-muted-foreground mb-6">
-                      Thank you for reaching out. I'll get back to you within 24 hours.
-                    </p>
-                    <Button 
-                      variant="outline" 
-                      onClick={() => setIsSubmitted(false)}
-                    >
-                      Send Another Message
-                    </Button>
+                    <p className="text-muted-foreground mb-6">Thank you for reaching out. I'll get back to you within 24 hours.</p>
+                    <Button variant="outline" onClick={() => setIsSubmitted(false)}>Send Another Message</Button>
                   </motion.div>
                 ) : (
                   <Form {...form}>
@@ -313,10 +287,10 @@ const ContactSection = () => {
                           <FormItem>
                             <FormLabel>Message</FormLabel>
                             <FormControl>
-                              <Textarea 
+                              <Textarea
                                 placeholder="Tell me about your project or what you'd like to discuss..."
                                 className="min-h-[120px]"
-                                {...field} 
+                                {...field}
                               />
                             </FormControl>
                             <FormMessage />
@@ -324,13 +298,7 @@ const ContactSection = () => {
                         )}
                       />
 
-                      <Button 
-                        type="submit" 
-                        variant="gradient" 
-                        size="lg" 
-                        disabled={isSubmitting}
-                        className="w-full"
-                      >
+                      <Button type="submit" variant="gradient" size="lg" disabled={isSubmitting} className="w-full">
                         {isSubmitting ? (
                           <>
                             <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>

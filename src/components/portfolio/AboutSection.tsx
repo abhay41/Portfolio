@@ -24,8 +24,8 @@ const aboutData = {
     },
     {
       icon: Code2,
-      title: "Full-Stack Developer",
-      description: "Proficient in both frontend and backend technologies, with experience in building scalable web applications."
+      title: "Cloud & DevOps Enthusiast",
+      description: "Passionate about streamlining infrastructure and automating workflows to deliver fast, scalable, and resilient cloud-native solutions."
     },
     {
       icon: Lightbulb,
@@ -40,13 +40,10 @@ const aboutData = {
   ],
 
   interests: [
-    "Artificial Intelligence & Machine Learning",
-    "Web Development & Mobile Apps",
     "Cloud Computing & DevOps",
-    "Cybersecurity & Ethical Hacking",
+    "Artificial Intelligence & Machine Learning",
     "Open Source Contributions",
     "Tech Blogging & Knowledge Sharing",
-    "Competitive Programming",
     "Startup Ecosystem & Innovation"
   ],
 
@@ -54,12 +51,12 @@ const aboutData = {
     {
       icon: BookOpen,
       title: "Research Paper",
-      description: "Published research on AI applications in healthcare"
+      description: "Published a paper titled *“Implementation and Performance Analysis of K-NN Algorithm for Classification”*, highlighting its real-world performance."
     },
     {
       icon: Trophy,
       title: "Scholarship",
-      description: "Received Merit-based Academic Scholarship 2023–24"
+      description: "Received the Study in India (SII) Scholarship (2022–2026) to pursue a degree in Computer Science."
     }
   ],
 
@@ -68,7 +65,6 @@ const aboutData = {
   futureGoals: [
     "Contribute to impactful open-source projects",
     "Build scalable solutions for global challenges",
-    "Mentor upcoming developers in the community",
     "Pursue advanced studies in AI/ML",
     "Launch a tech startup focused on social impact"
   ]

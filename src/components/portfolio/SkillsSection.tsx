@@ -18,97 +18,58 @@ const skillCategories = [
     title: "Programming Languages",
     icon: Code,
     skills: [
-      { name: "JavaScript/TypeScript", level: 90 },
       { name: "Python", level: 85 },
-      { name: "Java", level: 80 },
-      { name: "C++", level: 75 },
-      { name: "Go", level: 70 },
-      { name: "Rust", level: 65 }
+      { name: "Java", level: 75 },
     ]
   },
   {
-    title: "Web Technologies",
-    icon: Globe,
-    skills: [
-      { name: "React/Next.js", level: 92 },
-      { name: "Node.js/Express", level: 88 },
-      { name: "HTML/CSS", level: 95 },
-      { name: "GraphQL", level: 78 },
-      { name: "REST APIs", level: 90 },
-      { name: "WebSockets", level: 75 }
-    ]
-  },
-  {
-    title: "Databases & Storage",
+    title: "Databases",
     icon: Database,
     skills: [
-      { name: "PostgreSQL", level: 85 },
-      { name: "MongoDB", level: 82 },
-      { name: "Redis", level: 75 },
       { name: "MySQL", level: 80 },
-      { name: "Elasticsearch", level: 70 },
-      { name: "Firebase", level: 85 }
     ]
   },
+  
   {
     title: "Cloud & DevOps",
     icon: Cloud,
     skills: [
-      { name: "AWS", level: 80 },
+      { name: "Git/GitHub", level: 85 },
       { name: "Docker", level: 85 },
       { name: "Kubernetes", level: 72 },
       { name: "CI/CD", level: 78 },
-      { name: "Linux/Unix", level: 82 },
-      { name: "Terraform", level: 68 }
+      { name: "Bash Scripting", level: 75 },
+      { name: "Linux", level: 82 },
+      { name: "Terraform", level: 68 },
+      { name: "Ansible", level: 60 },
+      { name: "AWS", level: 65 },
+      { name: "Prometheus", level: 65 },
+      { name: "Grafana", level: 65 },
+      { name: "Jenkins", level: 75 }
     ]
   },
   {
-    title: "Mobile Development",
-    icon: Smartphone,
-    skills: [
-      { name: "React Native", level: 85 },
-      { name: "Flutter", level: 78 },
-      { name: "Android (Java/Kotlin)", level: 75 },
-      { name: "iOS (Swift)", level: 65 },
-      { name: "Progressive Web Apps", level: 88 }
-    ]
-  },
+  title: "Soft Skills",
+  icon: Shield,
+  skills: [
+    { name: "Communication", level: 90 },
+    { name: "Problem-Solving", level: 88 },
+    { name: "Team Collaboration", level: 92 },
+    { name: "Adaptability", level: 85 },
+    { name: "Time Management", level: 87 },
+    { name: "Critical Thinking", level: 84 }
+  ]
+},
   {
     title: "AI & Machine Learning",
     icon: Brain,
     skills: [
-      { name: "TensorFlow/PyTorch", level: 75 },
-      { name: "scikit-learn", level: 80 },
-      { name: "OpenAI APIs", level: 85 },
-      { name: "Computer Vision", level: 70 },
-      { name: "NLP", level: 72 },
-      { name: "Data Analysis", level: 85 }
+      { name: "TensorFlow/PyTorch", level: 65 },
+      { name: "Deep Learning", level: 65 },
+      { name: "Computer Vision", level: 65 }
     ]
   },
-  {
-    title: "Security & Tools",
-    icon: Shield,
-    skills: [
-      { name: "Git/GitHub", level: 95 },
-      { name: "Cybersecurity", level: 75 },
-      { name: "Testing (Jest/Cypress)", level: 82 },
-      { name: "Code Review", level: 88 },
-      { name: "System Design", level: 80 },
-      { name: "Agile/Scrum", level: 85 }
-    ]
-  },
-  {
-    title: "Development Tools",
-    icon: Wrench,
-    skills: [
-      { name: "VS Code", level: 95 },
-      { name: "IntelliJ IDEA", level: 85 },
-      { name: "Postman", level: 90 },
-      { name: "Figma", level: 78 },
-      { name: "Webpack/Vite", level: 82 },
-      { name: "ESLint/Prettier", level: 88 }
-    ]
-  }
+  
 ];
 
 const SkillsSection = () => {
@@ -206,28 +167,28 @@ const SkillsSection = () => {
           <Card className="glass-card glow-primary">
             <CardContent className="p-8">
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold mb-2">Overall Technical Proficiency</h3>
+                <h3 className="text-2xl font-bold mb-2">Technical Snapshot</h3>
                 <p className="text-muted-foreground">
-                  Based on years of experience, project complexity, and continuous learning
+                   DevOps-driven engineering mindset with hands-on experience in cloud infrastructure, automation, and full-cycle delivery.
                 </p>
               </div>
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">4+</div>
-                  <div className="text-sm text-muted-foreground">Years Coding</div>
+                  <div className="text-3xl font-bold text-primary mb-2">10+</div>
+                  <div className="text-sm text-muted-foreground">Cloud/DevOps Projects</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-secondary mb-2">50+</div>
-                  <div className="text-sm text-muted-foreground">Projects Built</div>
+                  <div className="text-3xl font-bold text-secondary mb-2">10+</div>
+                  <div className="text-sm text-muted-foreground">DevOps Tools Explored</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-accent mb-2">15+</div>
-                  <div className="text-sm text-muted-foreground">Technologies</div>
+                  <div className="text-3xl font-bold text-accent mb-2">Real-World</div>
+                  <div className="text-sm text-muted-foreground">Internship Exposure</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary-glow mb-2">24/7</div>
-                  <div className="text-sm text-muted-foreground">Learning Mode</div>
+                  <div className="text-sm text-muted-foreground">Learning & Evolving</div>
                 </div>
               </div>
             </CardContent>

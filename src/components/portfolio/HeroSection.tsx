@@ -150,19 +150,6 @@ const HeroSection = () => {
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Visitor Counter */}
-      <motion.div 
-        className="absolute bottom-4 right-4 glass-card p-3 rounded-lg"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 1.4 }}
-      >
-        <div className="text-center">
-          <p className="text-xs text-muted-foreground">Visitors</p>
-          <p className="text-lg font-bold text-primary">1,337</p>
-        </div>
-      </motion.div>
     </section>
   );
 };
