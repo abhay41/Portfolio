@@ -9,7 +9,7 @@ const projects = [
     id: 1,
     title: "Microservices Application Deployment with Ingress",
     description: "A DevOps project that demonstrates end-to-end deployment of a microservices-based application on AWS EKS using Docker, Jenkins, and Kubernetes. Includes CI/CD automation, monitoring with Prometheus & Grafana, and GitOps deployment using ArgoCD.",
-    image: "https://raw.githubusercontent.com/abhay41/Prime-Video/main/src/images/homepage.png",
+    image: "https://raw.githubusercontent.com/abhay41/Microservices-Ingress/main/screenshot/Screenshot.png",
     technologies: ["Docker", "Kubernetes", "AWS EKS", "Jenkins", "Prometheus", "Grafana", "ArgoCD", "Nginx"],
     category: "DevOps",
     demoLink: "https://github.com/abhay41/Microservices-Ingress.git",
