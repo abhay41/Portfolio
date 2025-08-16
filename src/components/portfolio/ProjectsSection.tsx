@@ -50,7 +50,7 @@ const projects = [
     id: 3,
     title: "Amazon Prime Clone",
     description: "A full-scale DevOps deployment of an Amazon Prime clone demonstrating automated CI/CD, containerization, and cloud-native orchestration.",
-    image: "https://raw.githubusercontent.com/abhay41/Prime-Video/main/docs/screenshots/homepage.png",
+    image: "https://raw.githubusercontent.com/abhay41/Prime-Video/main/src/images/homepage.png",
     technologies: ["NodeJS", "React", "Terraform", "Jenkins", "SonarQube", "Trivy", "Docker", "AWS ECR", "AWS EKS", "ArgoCD", "Prometheus", "Grafana"],
     category: "DevOps & Cloud",
     demoLink: "",
