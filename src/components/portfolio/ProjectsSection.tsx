@@ -35,7 +35,7 @@ const projects = [
     "Monitoring with Prometheus & Grafana",
     "GitOps deployment using ArgoCD"
   ]
-}
+},
 
   {
     id: 2,
