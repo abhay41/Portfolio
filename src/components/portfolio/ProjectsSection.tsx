@@ -15,21 +15,28 @@ import {
 
 // CONFIGURATION: Update these projects with your actual projects
 const projects = [
-  {
-    id: 1,
-    title: "AI-Powered Task Manager",
-    description: "An intelligent task management application that uses machine learning to prioritize tasks, predict completion times, and suggest optimal schedules. Features natural language processing for voice commands and smart notifications.",
-    image: "/api/placeholder/600/400",
-    technologies: ["React", "Node.js", "Python", "TensorFlow", "MongoDB", "WebSocket"],
-    category: "AI/ML",
-    demoLink: "https://demo-taskmanager.vercel.app",
-    githubLink: "https://github.com/abhay41/ai-task-manager",
-    featured: true,
-    status: "Completed",
-    year: "2024",
-    teamSize: "Solo Project",
-    highlights: ["Smart Task Prioritization", "Voice Commands", "Predictive Analytics"]
-  },
+{
+  id: 1,
+  title: "Microservices Application Deployment with Ingress",
+  description: "A DevOps project that demonstrates end-to-end deployment of a microservices-based application on AWS EKS using Docker, Jenkins, and Kubernetes. Includes CI/CD automation, monitoring with Prometheus & Grafana, and GitOps deployment using ArgoCD.",
+  image: "https://raw.githubusercontent.com/abhay41/Microservices-Ingress/main/screenshot/Screenshot.png",
+  technologies: ["Docker", "Kubernetes", "AWS EKS", "Jenkins", "Prometheus", "Grafana", "ArgoCD"],
+  category: "DevOps",
+  demoLink: "https://github.com/abhay41/Microservices-Ingress.git",
+  githubLink: "https://github.com/abhay41/Microservices-Ingress.git",
+  featured: true,
+  status: "Completed",
+  year: "2025",
+  teamSize: "Solo Project",
+  highlights: [
+    "CI/CD Pipeline with Jenkins",
+    "Microservices deployment on EKS",
+    "Ingress Controller setup",
+    "Monitoring with Prometheus & Grafana",
+    "GitOps deployment using ArgoCD"
+  ]
+}
+
   {
     id: 2,
     title: "E-Commerce Microservices Platform",
